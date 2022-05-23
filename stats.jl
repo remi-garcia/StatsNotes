@@ -11,8 +11,8 @@ function main(nomfichier::String, note_minimale::Float64)
     moyenne = round(sum(liste_notes)/length(liste_notes), digits=2)
     mediane = liste_notes[round(Int, length(liste_notes)/2, RoundUp)]
     if length(liste_notes) % 2 == 0
-        mediane = round(liste_notes[round(Int, length(liste_notes)/2)] +
-                liste_notes[round(Int, length(liste_notes)/2)+1],
+        mediane = round((liste_notes[round(Int, length(liste_notes)/2)] +
+                liste_notes[round(Int, length(liste_notes)/2)+1])/2,
                 digits=3)
     end
     mini = liste_notes[1]
@@ -39,8 +39,8 @@ function main(nomfichier::String, note_minimale::Float64)
         moyenne = round(sum(liste_notes_minimale)/length(liste_notes_minimale), digits=2)
         mediane = liste_notes_minimale[round(Int, length(liste_notes_minimale)/2, RoundUp)]
         if length(liste_notes_minimale) % 2 == 0
-            mediane = round(liste_notes_minimale[round(Int, length(liste_notes_minimale)/2)] +
-                    liste_notes_minimale[round(Int, length(liste_notes_minimale)/2)+1],
+            mediane = round((liste_notes_minimale[round(Int, length(liste_notes_minimale)/2)] +
+                    liste_notes_minimale[round(Int, length(liste_notes_minimale)/2)+1])/2,
                     digits=3)
         end
         mini = liste_notes_minimale[1]
