@@ -58,4 +58,4 @@ function main(nomfichier::String, note_minimale::Float64)
     return nothing
 end
 
-main(pwd()*"/"*ARGS[1], length(ARGS) >= 2 ? parse(Float64, ARGS[2]) : 4.0)
+main(ARGS[1][1] in ['/', '~'] ? ARGS[1] : pwd()*"/"*ARGS[1], length(ARGS) >= 2 ? parse(Float64, ARGS[2]) : 4.0)
